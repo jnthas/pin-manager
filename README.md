@@ -42,3 +42,34 @@ csum 0x2d
 vbc204a9b
 ~ld
 ``` 
+
+
+# How to use on application
+
+```
+// Create a webserver object
+ESP8266WebServer server(80);
+
+// Define the devices and its pins
+Device devices[] = {
+  { .name = "Device 1", .port = D1, .state = false },
+  { .name = "Device 2", .port = D2, .state = false },
+  { .name = "Device 3", .port = D3, .state = false }  
+};
+
+
+// Create a instace of device manager passing params
+Devicemanager deviceManager(server, devices);
+
+
+// Initialize in setup
+
+void setup(void) {
+  // Also, initialize wifi before
+
+  deviceManager.initialize()
+}
+``` 
+
+
+
