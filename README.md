@@ -58,8 +58,8 @@ Device devices[] = {
 };
 
 
-// Create a instace of device manager passing params
-Devicemanager deviceManager(server, devices);
+// Create an instace of device manager passing params
+DeviceManager deviceManager(server, devices);
 
 
 // Initialize in setup
